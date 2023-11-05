@@ -29,18 +29,23 @@
                 <li><a href="download.html">Download</a></li>
                 <li><a href="#">Review</a></li>
                 <li><a href="#">Dev-Blog</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="Support.html">Contact Us</a></li>
                 <li><a href="#">Community</a></li>
             </ul>
         </nav>
        
         
-        <div class="center-column"> <!-- Content for center column -->
-           <p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br>
-        </div>
-        
-        <div class="right-column">
-            <!-- Content for right column -->
+        <div class="service-support-form">
+            <h2>Kontaktieren Sie unseren Support</h2>
+            <form action="/submit_support_form" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">E-Mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Nachricht:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                <input type="submit" value="Absenden">
+            </form>
         </div>
     </main>
     

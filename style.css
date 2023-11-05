@@ -93,17 +93,146 @@ body {
     }
 
     
-    .center-column {
+    .center-column, .ImgFromGame{
         width: 43%;
         background-color: #f0f0f0;
     }
     
-    .right-column {
+    .right-column{
         width: 43%;
         background-color: #f0f0f0;
         padding: 20px;
     }
+    .Download, .Download a, .Download p{
+        width: 43%;
+        background-color: #f0f0f0;
+        padding: 20px;
+        text-align: center;
+        
+    }
+
+    .Download a{
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .Download p{
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .download-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
     
+    .download-button:hover {
+        background-color: #45a049;
+    }
+    
+    .download-button:active {
+        background-color: #3e8e41;
+    }
+    /* Form styles */
+
+    .service-support-form {
+        width: 50%;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .service-support-form h2 {
+        text-align: center;
+    }
+    
+    .service-support-form form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .service-support-form label {
+        margin-bottom: 5px;
+    }
+    
+    .service-support-form input[type="text"],
+    .service-support-form input[type="email"],
+    .service-support-form textarea {
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .service-support-form input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .service-support-form input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    .service-support-form input[type="submit"]:active {
+        background-color: #3e8e41;
+    }
+
+    /* Community styles */
+    .post-form {
+        margin-top: 30px;
+    }
+    
+    .post-form h3 {
+        text-align: center;
+    }
+    
+    .post-form form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .post-form label {
+        margin-bottom: 5px;
+    }
+    
+    .post-form input[type="text"],
+    .post-form textarea {
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    .post-form button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .post-form button:hover {
+        background-color: #45a049;
+    }
+    
+    .post-form button:active {
+        background-color: #3e8e41;
+    }
+    
+ 
     /* Footer styles */
     footer {
         text-align: center;
