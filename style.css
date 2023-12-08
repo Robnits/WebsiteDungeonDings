@@ -79,6 +79,9 @@ body {
     
     
     /* Main content styles */
+    div {
+        border: #000 solid thin;
+    }
     main {
         display: flex;
         justify-content: space-between;
@@ -103,27 +106,26 @@ body {
         background-color: #f0f0f0;
         padding: 20px;
     }
-    .Download, .Download a, .Download p{
-        width: 43%;
+
+    .Download a, .Download p{
+
         background-color: #f0f0f0;
         padding: 20px;
+        margin: 20px;
+
+
+              
+    }
+    .Download{
+        width: 43%;
         text-align: center;
-        
+      
     }
 
-    .Download a{
-        text-align: center;
-        vertical-align: middle;
-    }
-
-    .Download p{
-        text-align: center;
-        vertical-align: middle;
-    }
 
     .download-button {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 10px;
         background-color: #4CAF50;
         color: white;
         text-decoration: none;
@@ -140,9 +142,19 @@ body {
     .download-button:active {
         background-color: #3e8e41;
     }
-    /* Form styles */
+    .lonelydiv {
 
-    .service-support-form {
+            width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        
+
+    }
+    /* Form styles support */
+
+    .forms {
         width: 50%;
         margin: 0 auto;
         padding: 20px;
@@ -150,29 +162,31 @@ body {
         border-radius: 5px;
     }
     
-    .service-support-form h2 {
+    .forms h2 {
         text-align: center;
     }
     
-    .service-support-form form {
+    .forms form {
         display: flex;
         flex-direction: column;
     }
     
-    .service-support-form label {
+    .forms label {
         margin-bottom: 5px;
     }
     
-    .service-support-form input[type="text"],
-    .service-support-form input[type="email"],
-    .service-support-form textarea {
+    .forms input[type="text"],
+    .forms input[type="email"],
+    .forms input[type="password"],
+    .forms input[type="tel"],
+    .forms textarea {
         padding: 8px;
         margin-bottom: 15px;
         border-radius: 5px;
         border: 1px solid #ccc;
     }
     
-    .service-support-form input[type="submit"] {
+    .forms input[type="submit"] {
         background-color: #4CAF50;
         color: white;
         padding: 10px 20px;
@@ -181,11 +195,11 @@ body {
         cursor: pointer;
     }
     
-    .service-support-form input[type="submit"]:hover {
+    .forms input[type="submit"]:hover {
         background-color: #45a049;
     }
     
-    .service-support-form input[type="submit"]:active {
+    .forms input[type="submit"]:active {
         background-color: #3e8e41;
     }
 
@@ -231,6 +245,7 @@ body {
     .post-form button:active {
         background-color: #3e8e41;
     }
+   
     
  
     /* Footer styles */
@@ -241,6 +256,7 @@ body {
         background-color: #333;
         color: #fff;
         padding: 10px 0;
+        margin-top: 4%;
     }
     
     .footer-links {
