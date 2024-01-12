@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download</a></li>
-                <li><a href="#">Review</a></li>
+                <li><a href="review.php">Review</a></li>
                 <li><a href="#">Dev-Blog</a></li>
                 <li><a href="Support.html">Contact Us</a></li>
                 <li><a href="community.php">Community</a></li>
@@ -35,13 +35,27 @@
         </nav>
        
         
-        <div class="center-column"> <!-- Content for center column -->
-           <p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br><p>1</p><br>
-        </div>
-        
-        <div class="right-column">
-            <!-- Content for right column -->
-        </div>
+        <div class="center-column" >
+            <br>
+           <div class="community-posts" >
+
+           <?php
+        	include 'community-get.php';
+            ?>
+
+           </div>
+         </div>
+         
+         <div class="forms" class="right-column" >
+            <h3>Neuen Beitrag erstellen</h3>
+                <form action="community-post.php" method="post">
+                    <label for="benutzername">Benutzername:</label><br>
+                    <input type="text"name="benutzername" required><br><br>
+                    <label for="post-content">Beitragsinhalt:</label><br>
+                    <textarea id="communitypost" name="communitypost" rows="4" required></textarea><br><br>
+                    <input type="submit" value="Veröffentlichen">
+                </form>
+         </div>
     </main>
     
     <footer>

@@ -30,7 +30,7 @@
                 <li><a href="#">Review</a></li>
                 <li><a href="#">Dev-Blog</a></li>
                 <li><a href="Support.html">Contact Us</a></li>
-                <li><a href="Community.html">Community</a></li>
+                <li><a href="community.php">Community</a></li>
             </ul>
         </nav>
        
@@ -38,29 +38,30 @@
         <div class="forms">
             <h2>Registrierung</h2>
 
-        <form>
-            <label for="vorname">Vorname:</label>
-            <input type="text" id="vorname" name="vorname" required>
-
-            <label for="nachname">Nachname:</label>
-            <input type="text" id="nachname" name="nachname" required>
-
-            <label for="benutzername">Benutzername:</label>
-            <input type="text" id="benutzername" name="benutzername" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="mobil">Mobil:</label>
-            <input type="tel" id="mobil" name="mobil" required>
-
-            <label for="passwort">Passwort:</label>
-            <input type="password" id="passwort" name="passwort" required>
-
-            <label for="profilbild">Profilbild URL:</label>
-            <input type="text" id="profilbild" name="profilbild" required>
-
-            <input type="submit" value="Register">
+            <form method="post" action="register.php">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" required>
+            
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" required>
+            
+                <label for="benutzername">Benutzername:</label>
+                <input type="text" id="benutzername" name="benutzername" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            
+                <label for="mobil">Mobil:</label>
+                <input type="tel" id="mobil" name="mobil" required>
+            
+                <label for="passwort">Passwort:</label>
+                <input type="password" id="passwort" name="passwort" required>
+            
+                <label for="profilbild">Profilbild URL:</label>
+                <input type="text" id="profilbild" name="profilbild" required>
+            
+                <input type="submit" value="Register">
+            </form>
         </form>
         </div>
     </main>
