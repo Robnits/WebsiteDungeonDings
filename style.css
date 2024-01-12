@@ -54,7 +54,10 @@ body {
     }
     
     /* Navigation styles */
-    
+    nav {
+
+        min-height: 70vh;
+    }
     nav ul {
         padding: 10px 0;
         text-align:center; 
