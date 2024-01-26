@@ -46,7 +46,7 @@
          
          <div class="forms" class="right-column" >
             <h3>Reviews</h3>
-            <form action="submit_review.php" method="post">
+            <form action="review-get.php" method="post">
             <label>Benutzername:</label><br>
             <input type="text" id="benutzername" name="benutzername" required><br><br>
             <label for="bewertung">Bewertung:</label><br>
@@ -65,9 +65,10 @@
             </form>
 
             <hr>
-            <!-- Formular für Kommentare -->
+            
             <h3>Feedbacks</h3>
-            <form action="submit_comment.php" method="post">
+            <p>Es wird nicht angezeigt!</p>
+            <form action="feedback.php" method="post">
             <label>Benutzername:</label><br>
             <input type="text" id="benutzername" name="benutzername" required><br><br>
 
