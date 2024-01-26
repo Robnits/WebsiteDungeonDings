@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Jan 2024 um 16:35
+-- Erstellungszeit: 26. Jan 2024 um 10:15
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -44,7 +44,8 @@ CREATE TABLE `account` (
 
 INSERT INTO `account` (`account_ID`, `vorname`, `nachname`, `benutzername`, `email`, `mobile`, `passwort`, `profilebild_url`) VALUES
 (1, 'nnn', 'nnn', 'akak', 'nourwahbeh03@gmail.com', '017655213776', 'nourwahbeh', 'http://localhost/phpmyadmin/index.php?route=/table/change&db=dungeondings&table=account'),
-(2, 'Nour', 'Wahbeh', 'Akera', 'nourwahbeh03@gmail.com', '017655213776', 'Nourwahbeh2001', 'https://cdn.discordapp.com/attachments/926961045753434223/1176199082025435249/1.png?ex=6589af41&is=65773a41&hm=4233e14b4d0840df3abd45fc63666c2e92afc8e9dd7bd9435d4d942db28345e6&');
+(2, 'Nour', 'Wahbeh', 'Akera', 'nourwahbeh03@gmail.com', '017655213776', 'Nourwahbeh2001', 'https://cdn.discordapp.com/attachments/926961045753434223/1176199082025435249/1.png?ex=6589af41&is=65773a41&hm=4233e14b4d0840df3abd45fc63666c2e92afc8e9dd7bd9435d4d942db28345e6&'),
+(3, 'Nader', 'Wehbeh', 'Hanzo', 'nourwahbeh03@gmail.com', '56456456456', '1223456789', 'https://cdn.discordapp.com/attachments/926961045753434223/1176199082025435249/1.png?ex=6589af41&is=65773a41&hm=4233e14b4d0840df3abd45fc63666c2e92afc8e9dd7bd9435d4d942db28345e6&');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,34 @@ INSERT INTO `community` (`beitrag_id`, `benutzername`, `beitraginhalt`) VALUES
 (6, 'Akera', 'Test \r\nTest'),
 (7, 'Akera', 'wadawdwada'),
 (8, 'Akera', 'juigjkgjk'),
-(9, 'Akera', 'fsefesfes');
+(9, 'Akera', 'fsefesfes'),
+(10, 'Akera', 'jsjsjsjs'),
+(11, 'Akera', 'hfhfhfhfhf');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `feedbacks`
+--
+
+CREATE TABLE `feedbacks` (
+  `feedback_id` int(11) NOT NULL,
+  `benutzername` varchar(255) DEFAULT NULL,
+  `feedback` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `review_id` int(11) NOT NULL,
+  `benutzername` varchar(255) DEFAULT NULL,
+  `bewertung` int(11) DEFAULT NULL,
+  `review` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -119,6 +147,18 @@ ALTER TABLE `community`
   ADD PRIMARY KEY (`beitrag_id`);
 
 --
+-- Indizes für die Tabelle `feedbacks`
+--
+ALTER TABLE `feedbacks`
+  ADD PRIMARY KEY (`feedback_id`);
+
+--
+-- Indizes für die Tabelle `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`review_id`);
+
+--
 -- Indizes für die Tabelle `score`
 --
 ALTER TABLE `score`
@@ -138,13 +178,25 @@ ALTER TABLE `support`
 -- AUTO_INCREMENT für Tabelle `account`
 --
 ALTER TABLE `account`
-  MODIFY `account_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `account_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT für Tabelle `community`
 --
 ALTER TABLE `community`
-  MODIFY `beitrag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `beitrag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT für Tabelle `feedbacks`
+--
+ALTER TABLE `feedbacks`
+  MODIFY `feedback_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT für Tabelle `support`
