@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script><!-- Es ist ein externen css-->
     <title>Dungeondings</title>
 </head>
 <body>
@@ -38,7 +39,7 @@
         <div class="forms">
             <h2>Registrierung</h2>
 
-            <form method="post" action="register.php">
+            <form method="post" action="register.php" id="registerform">
                 <label for="vorname">Vorname:</label>
                 <input type="text" id="vorname" name="vorname" required>
             
@@ -59,10 +60,11 @@
             
                 <label for="profilbild">Profilbild URL:</label>
                 <input type="text" id="profilbild" name="profilbild" required>
+                <input type="file" name="" id="">
             
                 <input type="submit" value="Register">
             </form>
-        </form>
+
         </div>
     </main>
     
@@ -72,5 +74,6 @@
         <div class="footer-links"><a href="#">Copyrights</a></div>
         </div>
     </footer>
+    <script src="sw-register.js"></script>
 </body>
 </html>

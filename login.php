@@ -18,13 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
+   // Beispiel: Anmeldung erfolgreich
+   echo json_encode(array('status' => 'success', 'Nachrichtinhalt' => 'Anmeldung erfolgreich!.'));
+    } 
+    else {
+    // Falls jemand direkt auf diese Seite zugreift, ohne das Formular zu senden
+    echo json_encode(array('status' => 'error', 'Nachrichtinhalt' => 'Benutzername oder Passwort ist falsch!.'));
 
-        echo "Login erfolgreich!";
-    } else {
-
-        echo "Ungültige Benutzerdaten. Bitte versuchen Sie es erneut.";
     }
 }
-
 $conn->close();
 ?>

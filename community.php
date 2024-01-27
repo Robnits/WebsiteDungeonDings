@@ -36,13 +36,14 @@
        
         
         <div class="center-column" >
-            <br>
+            <br> <div class="comunity-scroll">
            <div class="community-posts" >
 
            <?php
         	include 'community-get.php';
             ?>
 
+           </div>
            </div>
          </div>
          

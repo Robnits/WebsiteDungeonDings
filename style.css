@@ -1,6 +1,11 @@
 /* Common styles for all devices */
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-wrap:wrap;
+    row-gap: 1em;
+    column-gap: 1em;
+
 }
 
 /* Desktop styles!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -8,35 +13,58 @@ body {
     /* Header styles */
     header {
         display:flex;
-        justify-content: space-between;
+        justify-content:space-around;
+        justify-content:space-between;
         align-items: center;
-        padding: 20px;
+        padding: 10px 0;
         background-color: #f5a1a1;
+        min-width: 100%;
+         flex-wrap:wrap;
+         row-gap: 1em;
+         column-gap: 1em;
+    }
+    .opennav {
+display: none;
+        width: 50px;
+        height: 50px;
+        right: 0px;
+        flex: 1 0 -20%;
+        min-width: 20px;
+    }
+    .opennav img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .opennav:hover .left-column {
+        display: block;
     }
     .logo h1 {
         font-size: 24px;
     }
     /* Accout styles */
     .account {
-        position: relative;
+
         width: 50px;
         height: 50px;
         right: 0px;
+        flex: 1 0 -20%;
+        min-width: 20px;
     }
     .account img {
         width: 100%;
         height: 100%;
+        display: block;
 
     }
     .account-popup {
         display: none;
         position: absolute;
-        top: 0px;
-        right: 50px;
+        top: 2%;
+        right: 3%;
         width: 100px;
-        height: 50px;
-        background: #f5a1a1;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        background: #ff0000b9;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.555);
         text-align: center;
         border-radius: 10px;
          
@@ -44,7 +72,7 @@ body {
     .account-popup a{
         text-decoration: none;
         color: #000;
-        padding: 3px;
+        padding: 5px;
         display:inline-flex;
         
     }
@@ -65,10 +93,10 @@ body {
     }
     
     nav ul li {
-        margin: 10px 0px;
-        padding: 5px 0px ;
+        margin: 5px 0px;
+        padding: 5px 3px ;
         border: thin solid #000000  ;
-        border-radius: 15%;
+        border-radius: 22%;
     }
     
     nav ul li a {
@@ -76,36 +104,54 @@ body {
         color: #000000;
         padding: 0px;
         font-size: 100%; 
+        
     }
     
     
     /* Main content styles */
-    div {
-        border: #000 solid thin;
-    }
+   
     main {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
-        padding: 20px;
+        padding:0;
+        min-height: 700px;
+        flex-wrap:wrap;
+        row-gap: 1em;
+        column-gap: 1em;
+        flex: 1 0 98%;
+        border: 1px solid #000000;
+
     }
     
     .left-column {
-        width: 7%;
 
         background-color: #f0f0f0;
         padding: 20px;
+        border: 1px solid #ccc;
+        flex: 1 0 -20%;
+        min-width: 20px;
+        
     }
+    
 
     
     .center-column, .ImgFromGame{
         width: 43%;
         background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        flex: 1 0 40%;
+        min-width: 500px;
     }
     
     .right-column{
         width: 43%;
         background-color: #f0f0f0;
         padding: 20px;
+        border: 1px solid #ccc;
+        flex: 1 0 40%;
+        min-width: 500px;
     }
 
     .Download a, .Download p{
@@ -120,6 +166,12 @@ body {
     .Download{
         width: 43%;
         text-align: center;
+        border: 1px solid #ccc;
+        background-color: #f0f0f0;
+        padding: 20px;
+        flex: 1 0 40%;
+        min-width: 500px;
+        
       
     }
 
@@ -143,22 +195,31 @@ body {
     .download-button:active {
         background-color: #3e8e41;
     }
-    .lonelydiv {
+    .lonelydiv   /* in impressum!! */ {
 
             width: 70%;
             margin: 0 auto;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            width: 43%;
+            flex: 1 0 40%;
+            min-width: 500px;
         
 
     }
     /* Comunity- posts Styles */
     .community-posts {
-        border: none;
-        width: 80%;
+        border: 1px solid #ccc;
+        width: 90%;
         align-items: center;
-        margin-left: 10%;
+        margin-left: 7%;
+
+    }
+    .comunity-scroll{
+
+         overflow: scroll;
+         height: 80%;
     }
 
 
@@ -189,11 +250,20 @@ body {
     .forms input[type="email"],
     .forms input[type="password"],
     .forms input[type="tel"],
-    .forms textarea, .forms select{
+    .forms select{
         padding: 8px;
         margin-bottom: 15px;
         border-radius: 5px;
         border: 1px solid #ccc;
+  
+    }
+    .forms textarea{
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        height: 20dvh;
+  
     }
     
     .forms input[type="submit"] {
@@ -217,11 +287,18 @@ body {
     footer {
         text-align: center;
         display: flex;
-        justify-content: space-between;
-        background-color: #333;
+
+        align-items: center;
         color: #fff;
         padding: 10px 0;
-        margin-top: 4%;
+        height: 5dvh;
+        justify-content:space-around;
+        background-color: #f5a1a1;
+        min-width: 100%;
+        flex-wrap:wrap;
+        row-gap: 1em;
+        column-gap: 1em;
+        
     }
     
     .footer-links {
@@ -234,9 +311,4 @@ body {
         color: #fff;
         margin: 0 70px;
     }
-}
-
-/* Phone and tablet styles */
-@media (max-width: 767px) {
-    /* Adjust styles for smaller screens here */
 }

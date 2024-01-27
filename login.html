@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Dungeondings</title>
 </head>
 <body>
@@ -37,7 +38,7 @@
         
         <div class="forms">
             <h2>Anmeldung</h2>
-            <form action="login.php" method="post">
+            <form action="login.php" method="post" id="loginform">
                 <label for="Benutzername">Benutzername:</label><br>
                 <input type="text" id="Benutzername" name="Benutzername" required><br><br>
                 <label for="Passwort">Passwort:</label><br>
@@ -53,7 +54,8 @@
         <div class="footer-links"><a href="#">Impressum</a></div>
         <div class="footer-links"><a href="#">AGB</a></div>
         <div class="footer-links"><a href="#">Copyrights</a></div>
-        </div>
+
     </footer>
+    <script src="sw-login.js"></script>
 </body>
 </html>
