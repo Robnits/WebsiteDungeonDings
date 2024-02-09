@@ -24,6 +24,7 @@
     
     <main>
         <nav class="left-column">
+        <h2 class="menu"><a href="">menu</a></h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download</a></li>
@@ -36,7 +37,8 @@
        
         
         <div class="center-column" >
-            <br> <div class="comunity-scroll">
+            <br> 
+            <div class="comunity-scroll">
            <div class="community-posts" >
 
            <?php
@@ -46,8 +48,8 @@
            </div>
            </div>
          </div>
-         
-         <div class="forms" class="right-column" >
+         <div class="right-column" >
+         <div class="forms" >
             <h3>Neuen Beitrag erstellen</h3>
                 <form action="community-post.php" method="post">
                     <label for="benutzername">Benutzername:</label><br>
@@ -57,6 +59,7 @@
                     <input type="submit" value="Veröffentlichen">
                 </form>
          </div>
+        </div>
     </main>
     
     <footer>

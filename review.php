@@ -24,6 +24,7 @@
     
     <main>
         <nav class="left-column">
+        <h2 class="menu"><a href="">menu</a></h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download</a></li>
@@ -43,8 +44,8 @@
 
            </div>
          </div>
-         
-         <div class="forms" class="right-column" >
+        <div  class="right-column"> 
+         <div class="forms" >
             <h3>Reviews</h3>
             <form action="review-get.php" method="post">
             <label>Benutzername:</label><br>
@@ -77,7 +78,7 @@
 
             <input type="submit" value="Feedback absenden">
 </form>
-         </div>
+         </div></div>
     </main>
     
     <footer>

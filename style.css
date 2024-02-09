@@ -1,50 +1,41 @@
+*{
+    box-sizing: border-box;
+}
 /* Common styles for all devices */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-wrap:wrap;
-    row-gap: 1em;
-    column-gap: 1em;
+    font-family: Arial, sans-serif;box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7.5vh minmax(82vh, 1fr) 7.5vh;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
 
+    
 }
 
 /* Desktop styles!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-@media (min-width: 768px) {
+
     /* Header styles */
     header {
-        display:flex;
-        justify-content:space-around;
+        grid-area: header;
+        display: flex;
+
         justify-content:space-between;
-        align-items: center;
-        padding: 10px 0;
         background-color: #f5a1a1;
-        min-width: 100%;
-         flex-wrap:wrap;
-         row-gap: 1em;
-         column-gap: 1em;
     }
-    .opennav {
-display: none;
-        width: 50px;
-        height: 50px;
-        right: 0px;
-        flex: 1 0 -20%;
-        min-width: 20px;
-    }
-    .opennav img {
-        width: 100%;
-        height: 100%;
-        display: block;
-    }
-    .opennav:hover .left-column {
-        display: block;
-    }
+   
     .logo h1 {
         font-size: 24px;
+        margin-left: 20px;
+
     }
     /* Accout styles */
     .account {
-
+        margin: 10px;
         width: 50px;
         height: 50px;
         right: 0px;
@@ -82,6 +73,7 @@ display: none;
     }
     
     /* Navigation styles */
+    .menu{ display: none;} 
     
     nav ul {
         padding: 10px 0;
@@ -111,47 +103,38 @@ display: none;
     /* Main content styles */
    
     main {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding:0;
-        min-height: 700px;
-        flex-wrap:wrap;
-        row-gap: 1em;
-        column-gap: 1em;
-        flex: 1 0 98%;
-        border: 1px solid #000000;
+        grid-area: main;
+        border: solid thin black; 
+        display: grid;
+        grid-template-columns: minmax(100px, 100px) repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "nav-column center-column center-column right-column right-column";
 
     }
     
     .left-column {
-
+        grid-area: nav-column;
+        border: solid thin black;
         background-color: #f0f0f0;
-        padding: 20px;
-        border: 1px solid #ccc;
-        flex: 1 0 -20%;
-        min-width: 20px;
+
         
     }
     
 
     
     .center-column, .ImgFromGame{
-        width: 43%;
-        background-color: #f0f0f0;
-        padding: 20px;
-        border: 1px solid #ccc;
-        flex: 1 0 40%;
-        min-width: 500px;
+        grid-area: center-column;
+    border: solid thin black;
     }
     
     .right-column{
-        width: 43%;
+
         background-color: #f0f0f0;
-        padding: 20px;
-        border: 1px solid #ccc;
-        flex: 1 0 40%;
-        min-width: 500px;
+        grid-area: right-column;
+        border: solid thin black;
     }
 
     .Download a, .Download p{
@@ -164,15 +147,12 @@ display: none;
               
     }
     .Download{
-        width: 43%;
+
         text-align: center;
         border: 1px solid #ccc;
         background-color: #f0f0f0;
         padding: 20px;
-        flex: 1 0 40%;
-        min-width: 500px;
-        
-      
+        grid-area: right-column;
     }
 
 
@@ -197,17 +177,12 @@ display: none;
     }
     .lonelydiv   /* in impressum!! */ {
 
-            width: 70%;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 43%;
-            flex: 1 0 40%;
-            min-width: 500px;
-        
+        grid-area: 1 / 2 / 2 / 6;
+        border: solid thin black;
+        padding: 10px ;
+        text-align: center;
 
-    }
+}
     /* Comunity- posts Styles */
     .community-posts {
         border: 1px solid #ccc;
@@ -219,18 +194,22 @@ display: none;
     .comunity-scroll{
 
          overflow: scroll;
-         height: 80%;
+         height: 75vh;
     }
 
 
     /* Form styles support */
 
     .forms {
-        width: 43%;
         margin: 0 auto;
         padding: 20px;
         border: 1px solid #ccc;
         border-radius: 5px;
+
+    }
+    .lonelydiv .forms{
+        width: 55%;
+        margin-top: 5%;
     }
     
     .forms h2 ,.forms h3 {
@@ -285,20 +264,16 @@ display: none;
  
     /* Footer styles */
     footer {
+        grid-area: footer;
+        border: solid thin black;
         text-align: center;
         display: flex;
-
         align-items: center;
         color: #fff;
-        padding: 10px 0;
-        height: 5dvh;
         justify-content:space-around;
         background-color: #f5a1a1;
-        min-width: 100%;
         flex-wrap:wrap;
-        row-gap: 1em;
-        column-gap: 1em;
-        
+
     }
     
     .footer-links {
@@ -309,6 +284,161 @@ display: none;
     .footer-links a {
         text-decoration: none;
         color: #fff;
-        margin: 0 70px;
+
     }
+/* styles for tablets!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    body{
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7.5vh minmax(82vh, 1fr) 7.5vh;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+
+    
+    }
+    header{ 
+        grid-area: header;
+        border: solid thin black; }
+      
+    main{ 
+        display: grid; 
+  grid-auto-columns: 1fr; 
+  grid-template-columns: minmax(100px, 100px) 1fr; 
+  grid-template-rows: repeat(4, 1fr); 
+  gap: 5px 5px; 
+  grid-template-areas: 
+    "nav-column center-column"
+    "nav-column center-column"
+    "nav-column right-column"
+    "nav-column right-column"; }
+      
+    footer{ 
+        grid-area: footer;
+        border: solid thin black; }
+    
+          
+    .left-column { grid-area: nav-column;
+        border: solid thin black; }
+          
+    .center-column { grid-area: center-column;
+        border: solid thin black; }
+          
+    .right-column { grid-area: right-column;
+        border: solid thin black; }
+    .lonelydiv   {grid-area: 1 / 2 / 5 / 3;}  
+    .menu{ display: none;} 
 }
+
+/* Handy style!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */ 
+ 
+ 
+@media only screen and (max-width: 768px) {
+    body{
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7.5vh minmax(82vh, 1fr) 7.5vh;
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "header"
+          "main"
+          "footer";
+
+    
+    }
+    header{ 
+        grid-area: header;
+        border: solid thin black; }
+      
+    main{ 
+        grid-area: main;
+        border: solid thin black; 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.25fr repeat(4, 1fr);
+        gap: 5px 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "nav-column"
+    "center-column"
+    "center-column"
+    "right-column"
+    "right-column";}
+      
+    footer{ 
+        grid-area: footer;
+        border: solid thin black; }
+    
+          
+    .nav-column { grid-area: nav-column;
+        border: solid thin black;
+        position: relative;}
+    
+       .center-column { grid-area: center-column;
+        border: solid thin black; }
+          
+    .right-column { grid-area: right-column;
+        border: solid thin black; }
+    .lonelydiv { grid-area: 2 / 1 / 6 / 2;}
+
+    /* Navigation styles */
+    .menu a, .menu{
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+        transition: 0.4s;
+        color: #000000;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        border-radius: 5px
+    }
+    
+    nav ul {
+        display: none;
+        padding: 10px 0;
+        text-align:center; 
+        list-style: none;
+        display:inline-flexbox;
+        
+
+    }
+    
+    nav ul li {
+        margin: 5px 0px;
+        padding: 5px 3px ;
+        border: thin solid #000000  ;
+        border-radius: 22%;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #000000;
+        padding: 0px;
+        font-size: 100%; 
+        
+    } 
+    .left-column:hover .nav-menu {
+        display: block;
+        position: relative;
+        z-index: 50;
+        
+        
+    }
+    .menu a:hover,.menu a:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background: white
+    }
+   
+    
+      
+      }
+      
