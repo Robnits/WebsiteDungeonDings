@@ -137,15 +137,14 @@ body {
         border: solid thin black;
     }
 
-    .Download a, .Download p{
+    .Download p{
 
-        background-color: #f0f0f0;
+        background-color: #ffffff;
         padding: 20px;
-        margin: 20px;
-
-
-              
+        margin: 20px;          
     }
+   
+
     .Download{
 
         text-align: center;
@@ -156,11 +155,12 @@ body {
     }
 
 
-    .download-button {
+
+    .download-button{
         display: inline-block;
         padding: 10px 10px;
-        background-color: #4CAF50;
-        color: white;
+        background-color: #45a049;
+        color: rgb(59, 0, 0);
         text-decoration: none;
         border: none;
         border-radius: 4px;
