@@ -82,9 +82,17 @@
     </main>
     
     <footer>
-        <div class="footer-links"><a href="#">Impressum</a></div>
-        <div class="footer-links"><a href="#">AGB</a></div>
-        <div class="footer-links"><a href="#">Copyrights</a></div>
+        <div class="footer-links"><a href="impressum.html">Impressum</a></div>
+        <div class="footer-links"><a href="agb.html">AGB</a></div>
+        <div class="footer-links">&copy; Copyrights Dungeondings &ThinSpace;
+            <div id="copy">
+                <script>
+                    const currentYearElement = document.getElementById("copy");
+                    const today = new Date();
+                    const currentYear = today.getFullYear();
+                    currentYearElement.textContent = ` ${currentYear}`;</script>
+            </div>
+        </div>
 
     </footer>
 </body>
