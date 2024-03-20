@@ -29,7 +29,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="download.html">Download</a></li>
                 <li><a href="review.php">Review</a></li>
-                <li><a href="#">Dev-Blog</a></li>
+                <li><a href="blogs.php">Dev-Blog</a></li>
                 <li><a href="Support.html">Contact Us</a></li>
                 <li><a href="community.php">Community</a></li>
             </ul>
@@ -85,7 +85,7 @@
         <div class="footer-links"><a href="#">Impressum</a></div>
         <div class="footer-links"><a href="#">AGB</a></div>
         <div class="footer-links"><a href="#">Copyrights</a></div>
-        </div>
+
     </footer>
 </body>
 </html>
