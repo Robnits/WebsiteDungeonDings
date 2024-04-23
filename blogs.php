@@ -26,45 +26,10 @@
         </nav>
         <main class="content">
             <div class="center">
-                <div class="review-posts" >
-
-                </div>
+                <h2>Events</h2>
             </div>
             <div class="beside">
-                <div class="forms" >
-                <h3>Reviews</h3>
-                <form action="php/review-get.php" method="post">
-                <label>Benutzername:</label><br>
-                <input type="text" id="benutzername" name="benutzername" required><br><br>
-                <label for="bewertung">Bewertung:</label><br>
-                <select id="bewertung" name="bewertung" required>
-                    <option value="1">1 - Schlecht</option>
-                    <option value="2">2 - Akzeptabel</option>
-                    <option value="3">3 - Durchschnittlich</option>
-                    <option value="4">4 - Gut</option>
-                    <option value="5">5 - Hervorragend</option>
-                </select><br><br>
-                <label for="review">Dein Review:</label><br>
-                <textarea id="review" name="review" rows="4" required>
-
-                </textarea><br><br>
-                <input type="submit" value="Review absenden">
-                </form>
-
-                <hr>
-            
-                <h3>Feedbacks</h3>
-                <p>Es wird nicht angezeigt!</p>
-                <form action="php/feedback.php" method="post">
-                <label>Benutzername:</label><br>
-                <input type="text" id="benutzername" name="benutzername" required><br><br>
-
-                <label for="comment">Dein Feedback:</label><br>
-                <textarea id="comment" name="comment" rows="4" required></textarea><br><br>
-
-                <input type="submit" value="Feedback absenden">
-                </form>
-                </div>
+                <h2>Updates</h2>
             </div>
         </main>
         <footer class="footer">
