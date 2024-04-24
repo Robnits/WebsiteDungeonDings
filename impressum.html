@@ -3,74 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DungeonDings Home</title>
     <link rel="stylesheet" href="style.css">
-    <title>Dungeondings</title>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>Dungeondings</h1>
-        </div>
-        <div class="account">
-            <img class="account-icon" src="Icons/account icon.svg" alt="account-icon">
-            <div class="account-popup">
-                <a href="login.html">login</a>
-                <a href="register.html">Register</a>
-            </div>
-        </div>
-    </header>
-    
-    
-    
-    <main>
-        <nav class="left-column">
-            <h2 class="menu"><a href="">menu</a></h2>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="download.html">Download</a></li>
-                <li><a href="review.php">Review</a></li>
-                <li><a href="blogs.html">Dev-Blog</a></li>
-                <li><a href="Support.html">Contact Us</a></li>
-                <li><a href="community.php">Community</a></li>
+<body class="container">
+
+        <header class="header">
+            <h1>DungeonDings</h1>
+
+        </header>
+        <nav class="nav">
+            <p class="menu-drop"><a href="">menu</a></p>
+            <ul class="nav-menu">
+                <li><a href="index.html"><img class="account-icon" src="icons/1.png" alt="Home-icon"><p>Home</p></a></li>
+                <li><a href="download.html"><img class="account-icon" src="icons/2.png" alt="Download-icon"><p>Download</p></a></li>
+                <li><a href="review.php"><img class="account-icon" src="icons/3.png" alt="Review-icon"><p>Review</p></a></li>
+                <li><a href="blogs.php"><img class="account-icon" src="icons/4.png" alt="Dev-Blog-icon"><p>Dev-Blog</p></a></li>
+                <li><a href="Support.php"><img class="account-icon" src="icons/5.png" alt="Contact Us-icon"><p>Contact Us</p></a></li>
+                <li><a href="community.php"><img class="account-icon" src="icons/6.png" alt="Community-icon"><p>Community</p></a></li>
             </ul>
         </nav>
-       
-        <div class="lonelydiv">
-            <h1>Impressum</h1>
-        
-            <address>
-                <p>Firma XYZ GmbH</p>
-                <p>Musterstraße 123</p>
-                <p>12345 Musterstadt</p>
-                <p>Telefon: 01234 567890</p>
-                <p>E-Mail: info@firma-xyz.de</p>
-                <p>Webseite: <a href="https://www.firma-xyz.de" target="_blank">www.firma-xyz.de</a></p>
-            </address>
-        
-            <p>Vertretungsberechtigter Geschäftsführer: Max Mustermann</p>
-            <p>Handelsregister: Amtsgericht Musterstadt, HRB 12345</p>
-            <p>Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE123456789</p>
-        
-            <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong></p>
-            <p>Max Mustermann, Musterstraße 123, 12345 Musterstadt</p>
-        </div>
-        
-
-    </main>
-    
-    <footer>
-        <div class="footer-links"><a href="impressum.html">Impressum</a></div>
-        <div class="footer-links"><a href="agb.html">AGB</a></div>
-        <div class="footer-links">&copy; Copyrights Dungeondings &ThinSpace;
-            <div id="copy">
+        <main class="content">
+            <div>
+            <<h1>Sabine-Blindow-Schule</h1>
+            <p>Klasse: I822</p>
+            <h2>Anschrift</h2>
+            <p>Adolfstraße 10, Hannover</p>
+            <h2>Telefon</h2>
+            <p>0511 15062</p>
+            <h2>E-Mail</h2>
+            <p>info@sabine-blindow-schulen.de</p>
+            <h2>Verantwortlich für den Inhalt</h2>
+            <p>Gavin Brandt, Robin Heidrich, Cedric Kock, Nour Wahbeh, Marcel Rili</p>
+          
+            <h2>Haftungsausschluss</h2>
+            <p>Die Inhalte dieser Website wurden sorgfältig recherchiert und nach bestem Wissen und Gewissen erstellt. Die Autoren übernehmen jedoch keine Gewähr für die Aktualität, Richtigkeit, Vollständigkeit oder Korrektheit der bereitgestellten Informationen.</p>
+          
+            <h2>Urheberrecht</h2>
+            <p>Alle Inhalte dieser Website, einschließlich Text, Bilder, Grafiken und Design, sind urheberrechtlich geschützt. Die Vervielfältigung, Verbreitung, Bearbeitung, Weitergabe oder sonstige Nutzung dieser Inhalte bedarf der vorherigen schriftlichen Genehmigung der Autoren.</p>
+          
+            <h2>Datenschutz</h2>
+            <p>Die Daten der Nutzer dieser Website werden gemäß den deutschen Datenschutzbestimmungen behandelt. Eine Weitergabe der Daten an Dritte erfolgt nicht.</p>
+          
+            <h2>Links</h2>
+            <p>
+                sabine-blindow-schulen.de <br>
+                DIES IST MIT AI GENERIERT</p>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-links"><a href="impressum.html">Impressum</a></div>
+            <div class="footer-links"><a href="agb.html">AGB</a></div>
+             <div class="footer-links">&copy; Copyrights DungeonDings&ThinSpace;
+            <span id="copy">
                 <script>
                     const currentYearElement = document.getElementById("copy");
                     const today = new Date();
                     const currentYear = today.getFullYear();
                     currentYearElement.textContent = ` ${currentYear}`;</script>
-            </div>
+            </span>
         </div>
+        </footer>
 
-    </footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,31 +23,53 @@
                 <li><a href="blogs.php"><img class="account-icon" src="icons/4.png" alt="Dev-Blog-icon"><p>Dev-Blog</p></a></li>
                 <li><a href="Support.php"><img class="account-icon" src="icons/5.png" alt="Contact Us-icon"><p>Contact Us</p></a></li>
                 <li><a href="community.php"><img class="account-icon" src="icons/6.png" alt="Community-icon"><p>Community</p></a></li>
+                <li><a href="logout.php"><img class="account-icon" src="icons/7.png" alt="account-icon"><p>Abmelden</p></a></li>
             </ul>
         </nav>
         <main class="content">
-            <div>
-                <h1>Allgemeine Geschäftsbedingungen</h1>
+        <?php
+            session_start();
 
-                <h2>§ 1 Geltungsbereich</h2>
-                <p>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen der Sabine-Blindow-Schule, I822, vertreten durch die Schulleitung (im Folgenden "Anbieter") und Nutzern der Website www.dungeondings.de (im Folgenden "Nutzer").</p>
-              
-                <h2>§ 2 Vertragsschluss</h2>
-                <p>Mit der Nutzung der Website www.dungeondings.de kommt ein Vertrag zwischen dem Anbieter und dem Nutzer zustande.</p>
-              
-                <h2>§ 3 Leistungen des Anbieters</h2>
-                <p>Der Anbieter stellt dem Nutzer die Website www.dungeondings.de zur Verfügung. Die Website ermöglicht es dem Nutzer, das Spiel "DungeonDings" zu spielen.</p>
-              
-                <h2>§ 4 Pflichten des Nutzers</h2>
-                <p>Der Nutzer verpflichtet sich, die Website www.dungeondings.de nur zu rechtmäßigen Zwecken zu nutzen. Der Nutzer darf keine Inhalte einstellen, die gegen die guten Sitten, die Rechte Dritter oder die gesetzlichen Bestimmungen verstoßen.</p>
-              
-                <h2>§ 5 Haftung</h2>
-                <p>Der Anbieter haftet für Schäden, die dem Nutzer durch die Nutzung der Website www.dungeondings.de entstehen, nur vorsätzlich oder grob fahrlässig.</p>
-              
-                <h2>§ 6 Schlussbestimmungen</h2>
-                <p>Diese AGB unterliegen dem deutschen Recht.<br>
-                DIES IST MIT AI GENERIERT</p> 
-            </div>
+            if (!isset($_SESSION['benutzername'])) {
+                header("Location: login.html"); 
+                exit();
+            }
+
+            $benutzername = $_SESSION['benutzername'];
+
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "dungeondings";
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "SELECT * FROM account WHERE benutzername = '$benutzername'";
+            $result = $conn->query($sql);
+            if ($result->num_rows == 1) {
+            $row = $result->fetch_assoc();
+
+
+            echo "<h2>Account-Details für " . $row["benutzername"] . "</h2>";
+            echo "<ul>";
+            if (!empty($row["profilebild_url"])) {
+                echo "<li><img src=\"" . $row["profilebild_url"] . "\" width=\"50px\" height=\"50px\"></li>";
+              } else {
+                // Optional: Display a placeholder image or message if profilbild is empty
+                echo "<li>Kein Profilbild vorhanden.</li>";
+              }            
+            echo "<br><li>Vorname: " . $row["vorname"] . "</li>";
+            echo "<li>Nachname: " . $row["nachname"] . "</li>";
+            echo "<li>E-Mail: " . $row["email"] . "</li>";
+            echo "<li>Mobil: " . $row["mobile"] . "</li>";
+            echo "</ul>";
+            }
+            $conn->close();
+            ?>
+        
         </main>
         <footer class="footer">
             <div class="footer-links"><a href="impressum.html">Impressum</a></div>
@@ -61,6 +84,6 @@
             </span>
         </div>
         </footer>
-
+        <script> src="php/sw-login.js"</script>
 </body>
 </html>
