@@ -30,9 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: cms.php");
         exit();
     } else {
-        echo "Falscher Benutzername oder Passwort. Bitte versuche es erneut.";
+        echo 'Falscher Benutzername oder Passwort. Bitte versuche es erneut.<a href="adminlogin.html">Zurück zum Login</a>';
     }
 }
-
 $conn->close();
 ?>

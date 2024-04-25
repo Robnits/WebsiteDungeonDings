@@ -30,11 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$vorname', '$nachname', '$benutzername', '$email', '$mobil', '$passwort', '$profilbild')";
 
     if ($conn->query($sql) === TRUE) {
-        echo json_encode(array('status' => 'success', 'Nachrichtinhalt' => 'Registrierung erfolgreich!'));
+        echo 'Registrierung erfolgreich!<br>
+        <a href="../login.html">Zurück zur Anmeldung</a>';
     } else {
-        echo json_encode(array('status' => 'error', 'Nachrichtinhalt' => 'Fehler bei der Registrierung.'));
+        echo 'Registrierung nicht erfolgreich!<br>
+        <a href="../register.html">Zurück zur Registrierung</a>';
     }
 }
-
 $conn->close();
 ?>

@@ -26,7 +26,6 @@ window.addEventListener('DOMContentLoaded', function () {
         });
     }); 
 
-   
     // Funktion für Erfolgsmeldung
     function zeigeErfolgsPopup(Nachrichtinhalt) {
         swal({

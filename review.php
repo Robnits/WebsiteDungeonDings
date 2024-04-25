@@ -29,7 +29,7 @@
                 <div class="posts" >
 
                     <?php
-        	        include 'php/review-post.php';
+        	        include 'php_js/review-post.php';
                     ?>
 
                 </div>

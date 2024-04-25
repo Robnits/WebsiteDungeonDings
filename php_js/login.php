@@ -22,11 +22,11 @@ $result = $conn->query($sql);
 if ($result->num_rows == 1) {
 
     $_SESSION['benutzername'] = $benutzername; 
-    header("Location: ../account.php"); 
+    header("Location: ../account.php");
     exit();
 } else {
 
-    echo "Falscher Benutzername oder Passwort. Bitte versuche es erneut.";
+    echo 'Falscher Benutzername oder Passwort. Bitte versuche es erneut.<br><a href="../login.html">zurück zum Login</a>';
 }
 
 $conn->close();

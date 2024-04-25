@@ -29,7 +29,7 @@
                 <div class="posts" >
 
                     <?php
-        	        include 'php/community-get.php';
+        	        include 'php_js/community-get.php';
                     ?>
 
                 </div>
