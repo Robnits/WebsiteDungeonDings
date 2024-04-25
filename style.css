@@ -263,19 +263,25 @@ body{
     .forms input[type="submit"]:active {
         background-color: #3e8e41;
     }
-/*  posts Styles */
+
 
     .scroll{
 
-      overflow: scroll;
+      overflow: scroll ;
       height: 75dvh;
       width: 100%;
       text-align: left;
+      
     }
     .posts {
        border: 1px solid #ccc;
        align-items: center;
        margin-left: 7%;
+       img{
+        display: block;
+        width: 100%;
+
+       }
       }
 
 
