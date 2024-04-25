@@ -38,7 +38,7 @@
             <div class="beside">
                 <div class="forms" >
                 <h3>Reviews</h3>
-                <form action="php/review-get.php" method="post">
+                <form action="php_js/review-get.php" method="post">
                 <label>Benutzername:</label><br>
                 <input type="text" id="benutzername" name="benutzername" required><br><br>
                 <label for="bewertung">Bewertung:</label><br>
@@ -61,7 +61,7 @@
                 <div class="forms">
                 <h3>Feedbacks</h3>
                 <p>Es wird nicht angezeigt!</p>
-                <form action="php/feedback.php" method="post">
+                <form action="php_js/feedback.php" method="post">
                 <label>Benutzername:</label><br>
                 <input type="text" id="benutzername" name="benutzername" required><br><br>
 

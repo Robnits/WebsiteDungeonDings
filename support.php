@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <main class="content">
             <div class="forms">
                 <h2>Kontaktieren Sie unseren Support</h2>
-                <form action="php/support.php" method="post">
+                <form action="php_js/support.php" method="post">
                     <label for="name">Name:</label><br>
                     <input type="text" id="name" name="name" required><br><br>
                     <label for="email">E-Mail:</label><br>

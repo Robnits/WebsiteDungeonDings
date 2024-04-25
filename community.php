@@ -38,7 +38,7 @@
             <div class="beside">
                 <div class="forms" >
                     <h3>Neuen Beitrag erstellen</h3>
-                    <form action="php/community-post.php" method="post">
+                    <form action="php_js/community-post.php" method="post">
                         <label for="benutzername">Benutzername:</label><br>
                         <input type="text"name="benutzername" required><br><br>
                         <label for="post-content">Beitragsinhalt:</label><br>
